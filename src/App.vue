@@ -2,7 +2,7 @@
   <template v-for="tile in tiles" :key="tile.number">
     <div :style="{backgroundColor: tile.color, gridArea: `tile${tile.number}`}"
          v-on:click="shuffle()"
-         v-bind:class="`tile${tile.number}`">
+         class="tile">
       <span>{{tile.number}}</span>
     </div>
   </template>
@@ -66,12 +66,12 @@ body {
   ;
   }
 }
-#app > div {
+#app > div.tile {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#app > div > span {
+#app > div.tile > span {
   user-select: none;
   cursor: default;
 }
